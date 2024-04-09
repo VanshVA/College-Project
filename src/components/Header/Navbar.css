@@ -1,0 +1,190 @@
+
+.Navbar {
+    width: 100%;
+    height: 6.25rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.Navbar .Navbar-Links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.Navbar .Navbar-Links i {
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.Navbar .Navbar-Right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.Navbar .Navbar-Right .Navbar-Search-Bar {
+    width: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid white;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.Navbar .Navbar-Right .Navbar-Search-Bar i {
+    font-size: 30px;
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.Navbar .Navbar-Right .Navbar-Search-Bar input {
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border-radius: 40px;
+    height: 100%;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.Navbar .Navbar-Right .Navbar-Hamburger-menu {
+    display: block;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    z-index: 2;
+}
+
+
+.Navbar .Navbar-Right .Navbar-Hamburger-menu .line1 {
+    width: 30px;
+    height: 3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.Navbar .Navbar-Right .Navbar-Hamburger-menu .line2 {
+    width: 30px;
+    float: inline-end;
+    margin-top: 0;
+    height: 3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 0.7vw;
+}
+
+.nav-links li a:hover {
+    color: red;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+
+.nav-links li a:hover::before {
+    width: 80%;
+}
+
+.nav-links a{
+    background-color: black;
+    padding: 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.nav-links {
+    position: absolute;
+    background: white;
+    clip-path: circle(0% at 20% 20%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    width: 90vw;
+    height: 10vh;
+    border-right: 1px solid white;
+    border-radius: 30px;
+    display: flex;
+    list-style: none;
+    padding: 0 0.7vw;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav-links.open {
+    clip-path: circle(60% at 100% 250%);
+    pointer-events: all;
+    display: flex;
+}
+
+.nav-links li {
+    opacity: 0;
+}
+
+.nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+}
+
+.nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+}
+
+.nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+}
+
+.nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.7s;
+}
+
+.nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.8s;
+}
+
+.nav-links li:nth-child(6) {
+    transition: all 0.5s ease 0.9s;
+    margin: 0;
+}
+
+.nav-links li:nth-child(7) {
+    transition: all 0.5s ease 1s;
+    margin: 0;
+}
+
+li.fade {
+    opacity: 1;
+}

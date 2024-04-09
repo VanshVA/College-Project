@@ -1,13 +1,13 @@
 import React from 'react'
-import Home from './components/home'
+import './App.css';
+import { Navbar, Home, About } from './components/index'
 export default function App() {
   return (
-    <div>Anuj
-      <Home></Home>
-    </div>
-
-   
-
+    <> 
+    <Navbar></Navbar>
+    <Home></Home>
+    <About></About>
+    </>
   )
 }
 
