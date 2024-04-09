@@ -1,10 +1,9 @@
 import React from 'react'
-
+import Home from './components/home'
 export default function App() {
   return (
-
-    <div>App
-      anuj kumer hbfibifuhovdoiovd
+    <div>Anuj
+      <Home></Home>
     </div>
 
    
