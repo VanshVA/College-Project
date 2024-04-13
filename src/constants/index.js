@@ -1,6 +1,6 @@
 export const navLinks = [
     {
-      id: "Home",
+      id: "",
       class: "navLink",
       title: "Home",
     },

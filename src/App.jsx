@@ -1,16 +1,19 @@
 import React from "react";
 import "./App.css";
-import { Navbar, Home, About } from "./components/index";
+import { Navbar, Home, About , AdminDashboard , Login} from "./components/index";
 import { Route, Routes } from "react-router-dom";
-import Login from "./components/Login/Login";
+import MaybeShowNavBar from "./components/MaybeShowNavbar";
+
+
+
 export default function App() {
   return (
     <>
+    <MaybeShowNavBar>
+    <Navbar></Navbar>
+    </MaybeShowNavBar>
       <Routes>
-        <Route path="/" element={<Navbar />}>
-          <Route path="/Home" element={<Home />}></Route>
-          <Route path="/About" element={<About />}></Route>
-        </Route>
+      <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </>
