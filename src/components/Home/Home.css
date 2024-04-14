@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.home-main {
+    width: 100%;
+    height: calc(100vh - 6rem);
+    padding: 0 45px;
+}
+
+.home-Iamges {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.home-Iamges .home-image-1 {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    z-index: 1;
+}
+
+.home-Iamges .home-image-1 img {
+    width: 750px;
+}
+
+.home-Iamges .home-image-2 {
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+    z-index: 1;
+}
+
+.home-Iamges .home-image-2 img {
+    width: 500px;
+}
+
+.Background-Blur {
+    width: calc(100% - 90px);
+    height: calc(100vh - 6rem);
+    position: absolute;
+    z-index: 2;
+    top: 6rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.home-title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-left: 50px;
+    top: 6rem;
+    z-index: 4;
+    width: 60%;
+    border-radius: 16px;
+    height: calc(100vh - 6rem);
+}
+
+.home-title img {
+    width: 100px;
+}
+
+.home-title h1 {
+    text-transform: uppercase;
+    font-size: 80px;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.4;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-title span {
+    background-color: #FF5530;
+    color: white;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.home-main h5 {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 25px;
+    position: absolute;
+    z-index: 5;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+@media screen and (max-width: 1230px) {}
+
+@media screen and (max-width:992px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width:576px) {}

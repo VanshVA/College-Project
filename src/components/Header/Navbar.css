@@ -51,11 +51,13 @@ nav{
    color: var(--black);
    border: 1px solid var(--black);
    border-radius: 50%;
+   color: #FF5330;
 }
 
 .navbar-main span{
     font-size: 30px;
     font-weight: 700;
+    color: #FF5330;
 }
 
 .navbar-right{
@@ -83,10 +85,13 @@ nav{
 
 .navbar-searbar i{
     font-size: 30px;
+    cursor: pointer;
 }
 
 .navbar-hamburger i{
     font-size: 30px;
+    cursor: pointer;
+    color: #FF5330;
 }
 
 @media  screen and (max-width: 1230px) {
