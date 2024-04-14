@@ -80,7 +80,7 @@ nav{
     border: none;
     box-sizing: border-box;
     border-radius: 30px;
-    
+    outline: none;
 }
 
 .navbar-searbar i{
