@@ -7,8 +7,8 @@ export default function Navbar() {
           <nav>
             <div className="navbar-left">
               <div className="navbar-navigation">
-              <i class="ri-user-line"></i>
-              <i class="icon2 ri-user-line"></i>
+              <i class="ri-sun-line"></i>
+              <i class="icon2 ri-service-fill"></i>
               <i class="icon2 ri-user-line"></i>
               <i class="icon3 ri-arrow-right-double-line"></i>
               </div>
