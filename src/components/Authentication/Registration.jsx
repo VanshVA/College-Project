@@ -40,9 +40,10 @@ export default function Registration() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                studentName:studentName,
-                studentEmail:studentEmail,
-                studentPassword:studentPassword
+                userKey:"S",
+                userName:studentName,
+                userEmail:studentEmail,
+                userPassword:studentPassword
             })
         }).then(res => res.json())
             .then(data => {

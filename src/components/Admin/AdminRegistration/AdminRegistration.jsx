@@ -35,15 +35,16 @@ export default function AdminRegistration() {
         }
 
         //Sending Data to Server
-        fetch("http://localhost:5000/teachersignup", {
+        fetch("http://localhost:5000/signup", {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                teacherName:teacherName,
-                teacherEmail:teacherEmail,
-                teacherPassword:teacherName
+                userKey:"T",
+                userName:teacherName,
+                userEmail:teacherEmail,
+                userPassword:teacherName
             })
         }).then(res => res.json())
             .then(data => {
