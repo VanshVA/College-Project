@@ -5,31 +5,34 @@
     height: calc(100vh - 6rem);
     padding: 0 45px;
     overflow: hidden;
-}
-
+} 
 .home-Iamges {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: relative; 
     overflow: hidden;
 }
 
 .home-Iamges .home-image-1 {
     position: absolute;
     top: 10%;
-    left: 45%;
+   right: 1%;
+    opacity: 0;
+    scale: 0.9;
     z-index: 1;
 }
 
 .home-Iamges .home-image-1 img {
-    width: 750px;
+    width: 700px;
 }
 
 .home-Iamges .home-image-2 {
     position: absolute;
     bottom: 15%;
-    right: 0;
+   right:1%;
+   scale: 0.9;
     z-index: 1;
+    opacity: 0;
 }
 
 .home-Iamges .home-image-2 img {
@@ -37,6 +40,7 @@
 }
 
 .Background-Blur {
+    opacity: 0;
     width: calc(100% - 90px);
     height: calc(100vh - 6rem);
     position: absolute;
@@ -44,33 +48,41 @@
     top: 6rem;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .home-title {
+    opacity: 0;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    padding-left: 50px;
+    padding-left: 10px;
     top: 6rem;
     z-index: 4;
-    width: 60%;
+    width: 50%;
     border-radius: 16px;
     height: calc(100vh - 6rem);
 }
 
 .home-title img {
-    width: 100px;
+ opacity: 0; 
+ scale: 0;  
+ width: 100px;
 }
 
-.home-title h1 {
+.home-title h1, .home-title h2, .home-title h3{
+    position: relative;
     text-transform: uppercase;
+    top:100px;
     font-size: 80px;
+     height: 100px;
+    text-shadow: 0px 5px 5px black;
+    opacity: 0;
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.4;
     text-align: center;
@@ -81,7 +93,9 @@
 }
 
 .home-title span {
+    cursor: pointer;
     background-color: #FF5530;
+  border: 3px solid orange;
     color: white;
     border-radius: 50px;
     padding: 20px;
@@ -93,11 +107,23 @@
     position: absolute;
     bottom: 5%;
     left: 50%;
+    width: 220px;
+     height: 60px;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
     transform: translate(-50%, 0);
     font-size: 25px;
+    border-radius: 30px;
     position: absolute;
     z-index: 5;
+    transition:  0.3s ease-in-out;
     font-family: 'Ubuntu', sans-serif;
+}
+.home-main h5:hover{
+    cursor: pointer;
+    border: 5px solid orangered;
 }
 
 @media screen and (max-width:1420px) {
@@ -105,7 +131,7 @@
         width: 90px;
     }
     
-    .home-title h1 {
+    .home-title h1, .home-title h2, .home-title h3{
         font-size: 70px;
     }
     .home-Iamges .home-image-1 {
@@ -145,16 +171,23 @@
     .home-title img {
         width: 80px;
     }
-    .home-title h1 {
-        font-size: 60px;
+    .home-title h1, .home-title h2, .home-title h3 {
+        font-size: 55px;
+        height: 85px;
     }
+    .home-title span {
+      
+        font-size: 25px;}
     .home-Iamges .home-image-1 {
-        top: 13%;
-        left: 34%;
+        top: 5%;
+        left: 32%;
     }
     .home-Iamges .home-image-2 {
-        bottom: 18%;
+        bottom: 25%;
         right: 5%;
+    }
+    .home-main h5 {
+        bottom: 0%;
     }
 }
 
@@ -168,7 +201,7 @@
     .home-title img {
         width: 60px;
     }
-    .home-title h1 {
+    .home-title h1, .home-title h2, .home-title h3 {
         font-size: 50px;
     }
     .home-Iamges .home-image-1 {
@@ -191,16 +224,23 @@
     .home-title img {
         width: 55px;
     }
-    .home-title h1 {
+    .home-title h1, .home-title h2, .home-title h3 {
         font-size: 40px;
+        height: 65px;
     }
     .home-Iamges .home-image-1 {
         top: 19%;
-        left: 38%;
+        left: 43%;
     }
     .home-Iamges .home-image-2 {
-        bottom: 23%;
-        right: 5%;
+        bottom: 35%;
+        right: 6%;
+    }
+    .home-title span {  
+        font-size: 18px;
+    }
+    .home-main h5 {
+        bottom: 0%;
     }
 }
 
@@ -233,12 +273,14 @@
         left: 45%;
         transform: translate(0%,50%);
     }
-    .home-title h1 {
-        font-size: 35px;
+    .home-title h1, .home-title h2, .home-title h3 {
+        height: 45px;
+        font-size: 32px;
+        transform: translateY(-28px);
     }
     .home-title span {
         padding: 10px;
-        font-size: 20px;
+        font-size: 17px;
         margin-right: 5px;
     }
     .home-main h5 {
