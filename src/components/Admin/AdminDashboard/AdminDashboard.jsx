@@ -1,7 +1,20 @@
 import React from 'react'
 import '../AdminDashboard.css'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function AdminDashboard() {
+
+ const navigate = useNavigate();
+
+  useEffect(() => {
+      let key = localStorage.getItem("jwt");
+      if(!key){
+         navigate("/login")
+      }
+  },[])
+  
+
   return (
     <>
         <h3 className="separator">Quick Access</h3>

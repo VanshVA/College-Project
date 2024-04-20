@@ -44,7 +44,7 @@ export default function AdminRegistration() {
                 userKey:"T",
                 userName:teacherName,
                 userEmail:teacherEmail,
-                userPassword:teacherName
+                userPassword:teacherPassword
             })
         }).then(res => res.json())
             .then(data => {

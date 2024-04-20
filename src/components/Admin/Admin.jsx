@@ -5,6 +5,7 @@ import AdminDashboard from './AdminDashboard/AdminDashboard';
 import AdminProfile from './AdminProfile/AdminProfile';
 import AdminRegistration from './AdminRegistration/AdminRegistration';
 import AdminSeeting from './AdminSeeting/AdminSeeting';
+import { useNavigate } from 'react-router-dom';
 
 export default function Admin() {
 
@@ -19,6 +20,12 @@ export default function Admin() {
   const [AS, setAS] = useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigate = useNavigate()
+  const logout = ()=>{
+    localStorage.setItem("jwt","")
+    navigate("/login")
+  }
 
   return (
     <>
@@ -85,7 +92,7 @@ export default function Admin() {
           </div>
           <div className="sign-out">
             <i className="ri-login-box-line" />
-            <h3>Sign out</h3>
+            <h3 onClick={()=> logout()}>Sign out</h3>
           </div>
         </div>
         <div className="main">

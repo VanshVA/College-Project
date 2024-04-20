@@ -16,7 +16,7 @@ export default function Navbar() {
           <div className="navbar-left">
             <div className="navbar-navigation">
               <i className="ri-sun-line"></i>
-              <i className="icon2 ri-service-fill"></i>
+              <i class="ri-dashboard-line"></i>
               <Link to="/login"><i className="icon2 ri-user-line"></i></Link>
               <i className="icon3 ri-arrow-right-double-line"></i>
             </div>

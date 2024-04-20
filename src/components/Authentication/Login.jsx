@@ -44,9 +44,17 @@ export default function Login() {
                 notifyA(data.error)
             } else {
                 notifyB(data.message)
-                navigate("/")
+                if(data.userKey == "A"){
+                  console.log(data.jwt)
+                  localStorage.setItem("jwt",data.jwt)
+                  navigate("/admin")
+                }
+                else if(data.userKey == "S"){
+                  navigate("/login")
+                }else{
+                  navigate("/login")
+                }
             }
-            console.log(data.userKey)
         })
 }
 
