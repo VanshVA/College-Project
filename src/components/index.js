@@ -1,10 +1,14 @@
 import Navbar from "./Header/Navbar";
 import Home from "./Home/Home";
 import About from "./About/About";
-import Login from "./Login/Login";
-import AdminDashboard from "./Admin/AdminDashboard";
+import Login from "./Authentication/Login";
+import Registration from "./Authentication/Registration";
+import ForgotPassword from "./Authentication/ForgotPassword";
+import Admin from "./Admin/Admin";
 export {Home};
 export {About};
 export {Login};
 export {Navbar};
-export {AdminDashboard}
+export {Admin};
+export {Registration};
+export {ForgotPassword};
