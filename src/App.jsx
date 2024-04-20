@@ -1,12 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Navbar, Home, About , AdminDashboard , Login} from "./components/index";
 import { Route, Routes } from "react-router-dom";
 import MaybeShowNavBar from "./components/MaybeShowNavbar";
-
-
-
-export default function App() {
+function App() {
   return (
     <>
     <MaybeShowNavBar>
@@ -19,3 +16,4 @@ export default function App() {
     </>
   );
 }
+export default App;
