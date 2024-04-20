@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Authentication.css'
-function Login() {
+export default function Login() {
 
   return ( 
 <>
@@ -32,4 +32,3 @@ function Login() {
 
   )
 }
-export default Login
