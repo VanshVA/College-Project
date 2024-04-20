@@ -8,9 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function App() {
-
-function App() {
-
   return (
     <>
     <MaybeShowNavBar>
@@ -26,6 +23,6 @@ function App() {
       <ToastContainer position="top-center"></ToastContainer>
     </>
   );
-}
+
 }
 
