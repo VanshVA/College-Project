@@ -1,5 +1,5 @@
 import "./App.css";
-import { Navbar, Home, About , Admin , Login , Registration , ForgotPassword} from "./components/index";
+import { Navbar, Home, About , Admin , Login , Registration , ForgotPassword , Contact , Footer} from "./components/index";
 import { Route, Routes } from "react-router-dom";
 import MaybeShowNavBar from "./components/MaybeShowNavbar";
 import { ToastContainer } from "react-toastify";  
@@ -20,6 +20,9 @@ export default function App() {
         <Route path="/forgotPassword" element={<ForgotPassword/>} />
         <Route path="/admin" element={<Admin/>} />
       </Routes>
+      <About></About>
+      <Contact></Contact>
+      <Footer></Footer>
       <ToastContainer position="top-center"></ToastContainer>
     </>
   );

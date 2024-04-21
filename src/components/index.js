@@ -1,6 +1,8 @@
 import Navbar from "./Header/Navbar";
 import Home from "./Home/Home";
 import About from "./About/About";
+import Contact from "./Contact/Contact";
+import Footer from "./Footer/Footer";
 import Registration from "./Authentication/Registration";
 import ForgotPassword from "./Authentication/ForgotPassword";
 import Admin from "./Admin/Admin";
@@ -16,3 +18,5 @@ export {Admin};
 export {Registration};
 export {ForgotPassword};
 export {AdminDashboard};
+export {Contact};
+export {Footer}
