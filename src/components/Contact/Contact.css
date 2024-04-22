@@ -34,8 +34,7 @@
     overflow: hidden;
   }
   .main_container_right input,
-  textarea,
-  button {
+  .main_container_right textarea,.main_container_right button {
     border: 1px solid #e7e2dc;
     background-color: transparent;
     padding: 15px 10px;
