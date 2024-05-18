@@ -1,59 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 .home-main {
-    width: 100%;
-    height: calc(100vh - 6rem);
+    width: 100%; 
+    height: 100vh;
+    top: 6rem;
     padding: 0 45px;
     overflow: hidden;
-} 
-.home-Iamges {
+}  
+.home-image { 
     width: 100%;
+    top: 6rem;
     height: 100%;
     position: relative; 
     overflow: hidden;
 }
 
-.home-Iamges .home-image-1 {
+.home-image .home-image-1 {
     position: absolute;
-    top: 10%;
-   right: 1%;
+    top: 9%;
+   right: 2%;
     opacity: 0;
     scale: 0.9;
     z-index: 1;
 }
-
-.home-Iamges .home-image-1 img {
-    width: 800px;
+ 
+.home-image .home-image-1 img {
+    width: 820px; 
 }
 
-.home-Iamges .home-image-2 {
+.home-image .home-image-2 {
     position: absolute;
-    bottom: 15%;
-   right:1%;
-   scale: 0.9;
+    bottom: 24%;
+   right:7%;
     z-index: 1;
     opacity: 0;
 }
 
-.home-Iamges .home-image-2 img {
+.home-image .home-image-2 img {
     width: 500px;
 }
 
 .Background-Blur {
     opacity: 0;
-    width: calc(100% - 90px);
-    height: calc(100vh - 6rem);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: calc(100% - 8%);
+    height: calc(100vh - 8rem);
     position: absolute;
     z-index: 2;
-    top: 6rem;
+    top: 7rem;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow:  0 0px 5px 2px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
-
+ 
 .home-title {
     opacity: 0;
     position: absolute;
@@ -62,7 +66,8 @@
     align-items: start;
     justify-content: center;
     padding-left: 10px;
-    top: 6rem;
+    transition: 0.3s ease-in-out;
+    top: 8rem;
     z-index: 4;
     width: 50%;
     border-radius: 16px;
@@ -77,19 +82,23 @@
 
 .home-title h1, .home-title h2, .home-title h3{
     position: relative;
+    overflow: hidden;
+    width: 85%;
     text-transform: uppercase;
+    text-align: start;
     top:100px;
-    font-size: 80px;
+    font-size: 75px;
+    /* background-color: #FF5530; */
      height: 100px;
-    text-shadow: 0px 5px 5px black;
+     text-shadow: 0px 5px 5px black;
     opacity: 0;
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.4;
     text-align: center;
     display: flex;
     font-weight: 700;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 .home-title span {
@@ -98,9 +107,8 @@
   border: 3px solid orange;
     color: white;
     border-radius: 50px;
-    padding: 20px;
+    padding: 22px;
     font-size: 30px;
-    margin-right: 10px;
 }
 
 .home-main h5 {
@@ -125,6 +133,26 @@
     cursor: pointer;
     border: 5px solid orangered;
 }
+.home-main .Background-Blur .scrollDownBtn{
+    position: relative;
+    width: 13%;
+    height: 8%;
+    visibility: hidden;
+    margin-bottom: 5%;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+   font-weight: 700;
+   border: 2px solid orangered;
+   transition: 0.5s ease-in-out;
+  color: black;
+}
+.home-main .Background-Blur .scrollDownBtn:hover{
+    border-color: gray;
+    font-weight: 900;
+    color: white;
+    background-color: orangered;
+}
 
 @media screen and (max-width:1420px) {
     .home-title img {
@@ -134,38 +162,38 @@
     .home-title h1, .home-title h2, .home-title h3{
         font-size: 70px;
     }
-    .home-Iamges .home-image-1 {
+    .home-image .home-image-1 {
         top: 13%;
         left: 40%;
     }
-    .home-Iamges .home-image-2 {
+    .home-image .home-image-2 {
         bottom: 18%;
         right: 5%;
     }
 }
 
 @media screen and (max-width:1335px) {
-    .home-Iamges .home-image-1 img {
+    .home-image .home-image-1 img {
         width: 700px;
     }
-    .home-Iamges .home-image-2 img {
+    .home-image .home-image-2 img {
         width: 450px;
     }
-    .home-Iamges .home-image-1 {
+    .home-image .home-image-1 {
         top: 13%;
         left: 40%;
     }
-    .home-Iamges .home-image-2 {
+    .home-image .home-image-2 {
         bottom: 18%;
         right: 5%;
     }
 }
 
 @media screen and (max-width: 1230px) {
-    .home-Iamges .home-image-1 img {
+    .home-image .home-image-1 img {
         width: 650px;
     }
-    .home-Iamges .home-image-2 img {
+    .home-image .home-image-2 img {
         width: 400px;
     }
     .home-title img {
@@ -178,11 +206,11 @@
     .home-title span {
       
         font-size: 25px;}
-    .home-Iamges .home-image-1 {
+    .home-image .home-image-1 {
         top: 5%;
         left: 32%;
     }
-    .home-Iamges .home-image-2 {
+    .home-image .home-image-2 {
         bottom: 25%;
         right: 5%;
     }
@@ -192,10 +220,10 @@
 }
 
 @media screen and (max-width:992px) {
-    .home-Iamges .home-image-1 img {
+    .home-image .home-image-1 img {
         width: 500px;
     }
-    .home-Iamges .home-image-2 img {
+    .home-image .home-image-2 img {
         width: 300px;
     }
     .home-title img {
@@ -204,22 +232,22 @@
     .home-title h1, .home-title h2, .home-title h3 {
         font-size: 50px;
     }
-    .home-Iamges .home-image-1 {
-        top: 18%;
+    .home-image .home-image-1 {
+        top: 10%;
         left: 40%;
     }
-    .home-Iamges .home-image-2 {
-        bottom: 23%;
+    .home-image .home-image-2 {
+        bottom: 40%;
         right: 5%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .home-Iamges .home-image-1 img {
-        width: 400px;
+    .home-image .home-image-1 img {
+        width: 450px;
     }
-    .home-Iamges .home-image-2 img {
-        width: 250px;
+    .home-image .home-image-2 img {
+        width: 290px;
     }
     .home-title img {
         width: 55px;
@@ -228,12 +256,12 @@
         font-size: 40px;
         height: 65px;
     }
-    .home-Iamges .home-image-1 {
-        top: 19%;
-        left: 43%;
+    .home-image .home-image-1 {
+        top: 15%;
+        left: 35%;
     }
-    .home-Iamges .home-image-2 {
-        bottom: 35%;
+    .home-image .home-image-2 {
+        bottom: 40%;
         right: 6%;
     }
     .home-title span {  
@@ -245,19 +273,19 @@
 }
 
 @media screen and (max-width:576px) {
-    .home-Iamges .home-image-1 {
+    .home-image .home-image-1 {
         top: 15%;
         left: 2%;
     }
-    .home-Iamges .home-image-1 img {
-        width: 100%;
+    .home-image .home-image-1 img {
+        width:  100%;
     }
-    .home-Iamges .home-image-2 {
-        bottom: 17%;
-        left: 5%;
+    .home-image .home-image-2 {
+        bottom: 27%;
+        left: 12%;
     }
-    .home-Iamges .home-image-2 img {
-        width: 100%;
+    .home-image .home-image-2 img {
+        width: 240px;
     }
     .home-title {
         padding-left: 0px;
@@ -285,5 +313,7 @@
     }
     .home-main h5 {
         font-size: 15px;
+        bottom: -30px;
     }
+
 }

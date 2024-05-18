@@ -1,24 +1,113 @@
-import React from 'react'
-import './Navbar.css'
-import { Link } from 'react-router-dom'
+import React from "react";
 import "./Navbar.css";
+import { Link } from "react-scroll";
+import "./Navbar.css";
+import { useState } from "react";
 import NavbarAnimation from "../../utils/Navbar";
-export default function Navbar() {
-  NavbarAnimation();
+function Navbar() {
+  let [toggle, setToggle] = useState(false);
+  NavbarAnimation(toggle); 
   return (
     <>
-      {/* <div className="Hamburger-click">
-        <div className="left-side-container">hello</div>
-        <div className="right-side-container">hii</div>
-      </div> */}
+        {/* click navbar */}
+      <div className= "hamburger-click">
+        <nav className="hamburger-nav-container"> 
+          <div 
+            className=
+              "hamburger-navLink-left-side" 
+          >
+            <div
+              className= "hamburger-navLinks-container"> 
+              <div
+                className= "clicked-hamburger-navLinks">
+                <li>
+                  <Link to="Home-section" smooth= {true} duration={500}>Home</Link>
+                  <i
+                    className= "ri-arrow-right-up-line" 
+                  ></i>
+                </li>
+              </div>
+              <div
+                className="clicked-hamburger-navLinks"
+              >
+                <li>
+                  <Link to= "About-section" smooth={true} duration={500}>About</Link>
+                  <i
+                    className="ri-arrow-right-up-line" 
+                  ></i>
+                </li>
+              </div>
+              <div
+                className="clicked-hamburger-navLinks"
+              >
+                <li>
+                  <Link to= "Services-section" smooth = {true} duration={500}>Services</Link>
+                  <i
+                    className="ri-arrow-right-up-line"
+                  ></i>
+                </li>
+          
+              </div>
+              <div
+                className="clicked-hamburger-navLinks" 
+              >
+                <li>
+                  <Link to="Contact-section" smooth= {true} duration={500}>Contact</Link>
+                  <i
+                    className="ri-arrow-right-up-line"
+                  ></i>
+                </li>
+              </div>
+              <div
+                className= "clicked-hamburger-navLinks" 
+              >
+                <li>
+                  <Link to="Footer-section" smooth={true} duration={500}>Footer</Link>
+                  <i
+                    className= "ri-arrow-right-up-line"
+                  ></i>
+                </li>         
+              </div>
+            </div>
+          </div>
+          <div
+            className="hamburger-image-right-side" 
+          >
+            <div
+              className= "hamburger-image-area" 
+            >
+            </div>
+            <div
+              className= "clicked-navbar-hamburger" 
+            >
+              <i
+                className="ri-arrow-right-circle-fill" 
+                onClick={() => setToggle(!toggle)}
+              ></i>
+            </div>
+          </div>
+        </nav>
+      </div>
+      {/* real navbar */}
       <div className="navbar-main">
-        <nav>
+        <nav className="nav">
           <div className="navbar-left">
             <div className="navbar-navigation">
-              <i className="ri-sun-line"></i>
-              <i class="ri-dashboard-line"></i>
-              <Link to="/login"><i className="icon2 ri-user-line"></i></Link>
-              <i className="icon3 ri-arrow-right-double-line"></i>
+              <div className="navLinks">
+                <li>
+                  <i className="ri-sun-line"></i>
+                </li>
+              </div> 
+              <div className="navLinks">
+                <li>
+                  <i className="ri-dashboard-line"></i>
+                </li>
+              </div>
+              <div className="navLinks">
+                <li>
+                  <i className=" ri-user-line"></i>
+                </li>
+              </div>
             </div>
           </div>
           <div className="navbar-right">
@@ -27,7 +116,10 @@ export default function Navbar() {
               <input type="text" placeholder="Seacrh.." />
             </div>
             <div className="navbar-hamburger">
-              <i className="ri-menu-4-line"></i>
+              <i
+                className="ri-menu-4-line"
+                onClick={() => setToggle(!toggle)}
+              ></i>
             </div>
           </div>
         </nav>
@@ -35,3 +127,5 @@ export default function Navbar() {
     </>
   );
 }
+
+export default Navbar;

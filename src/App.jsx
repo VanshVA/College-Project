@@ -1,18 +1,11 @@
 import "./App.css";
-import { Navbar, Home, About , Admin , Login , Registration , ForgotPassword , Contact , Footer} from "./components/index";
+import { Navbar, Home, About , Admin , Login , Registration , ForgotPassword, Services , Contact , Footer} from "./components/index";
 import { Route, Routes } from "react-router-dom";
-import MaybeShowNavBar from "./components/MaybeShowNavbar";
-import { ToastContainer } from "react-toastify";  
-import 'react-toastify/dist/ReactToastify.css';
-
-
-
-export default function App() {
-  return (
-    <>
-    <MaybeShowNavBar>
-    <Navbar></Navbar>
-    </MaybeShowNavBar>
+import Loader from '../src/components/Loader/Loader'
+export default function App() {  return (
+     <>
+    <Loader></Loader>   
+    <Navbar></Navbar>  
       <Routes>
       <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -21,9 +14,9 @@ export default function App() {
         <Route path="/admin" element={<Admin/>} />
       </Routes>
       <About></About>
+      <Services></Services> 
       <Contact></Contact>
       <Footer></Footer>
-      <ToastContainer position="top-center"></ToastContainer>
     </>
   );
 

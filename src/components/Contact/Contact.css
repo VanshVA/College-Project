@@ -1,12 +1,21 @@
-
-.main_container {
+.Contact_section{
+  position: relative;
+  width: 100%; 
+  padding: 40px 5vw;
+  height: 45.6rem;
+  /* background-color: rgb(14, 24, 21); */
+}
+.contact_main_container {
+  /* transform: rotateX(85deg) perspective(800px); */
+  opacity: 1;
+  position: relative;
     background-color: #292929;
-    margin: 30px 5vw;
     display: flex;
-    height: 80vh;
+    height: 100%;
     padding: 50px;
     font-family: "Ubuntu", sans-serif;
     border-radius: 20px;
+  /* transition: 0.3s ease-in-out; */
   }
   .main_container_left {
     display: flex;
@@ -15,12 +24,13 @@
     width: 50%;
     height: 100%;
   }
-  #h1First {
+  .h1First {
     color: #ff5330;
     font-size: 75px;
+    opacity: 1;
     font-weight: 400;
   }
-  #h1Second {
+  .h1Second {
     font-size: 75px;
     color: white;
     font-weight: 400;

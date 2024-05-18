@@ -1,6 +1,7 @@
 import Navbar from "./Header/Navbar";
 import Home from "./Home/Home";
 import About from "./About/About";
+import Services from "./Services/Services"
 import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
 import Registration from "./Authentication/Registration";
@@ -12,6 +13,7 @@ import AdminDashboard from "../components/Admin/AdminDashboard/AdminDashboard";
 export {Loader};
 export {Home};
 export {About};
+export {Services};
 export {Login};
 export {Navbar};
 export {Admin};

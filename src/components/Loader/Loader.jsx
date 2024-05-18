@@ -4,22 +4,23 @@ import upperImg from "../../assets/HYPER-loader.png";
 import lowerImg from "../../assets/Help-loader.png";
 import "./Loader.css";
 function Loader() {
-  let [isLoading, setIsLoading] = useState(0);
+  let [isLoading, setIsLoading] = useState(0); 
     LoaderAnimation(isLoading);
-  useEffect(() => {
+  useEffect(() => { 
     function increment() {
-      if (isLoading < 100) {
+      if (isLoading < 100) {  
         setIsLoading((isLoading = isLoading + Math.floor(Math.random() * 10)));
-      }
+        // console.log(isLoading)
+      }  
     }
-    setInterval(increment,500)
-    if(isLoading>=100){
+    setInterval(increment,300)
+    if(isLoading>100){ 
       setIsLoading(100);
-      clearInterval(increment)
+      clearInterval(increment)  
     }
-  }, []);
+  }, []);  
   return (
-    <div className="loader-container">
+    <div className="loader-container"> 
       <div className="main-loader">
         <div className="upper-img-container">
           <img src={upperImg} alt="" />

@@ -1,76 +1,114 @@
 import gsap from "gsap";
 gsap.registerPlugin(useGSAP);
 import { useGSAP } from "@gsap/react";
-// import NavbarAnimation from "./Navbar";
 function LoaderAnimation(isLoading) {
-  const BeforeCompleteLoading = useGSAP(() => {
+  useGSAP(() => {
     const tl1 = gsap.timeline();
     //before counter complete animation
     tl1
-      .from(".loader-container .main-loader .upper-img-container", {
-        x: -900,
-        duration: 0.8,
-        opacity: 0,
-      })
-      .to(".loader-container .main-loader .mid-counter", {
-        scale: 1,
-        duration: 0.8,
-      })
-      .from(".loader-container .main-loader .lower-img-container", {
-        duration: 0.8,
-        x: 200,
-        opacity: 0,
-        duration: 0.7,
-      });
+      .add("start") 
+      .to(
+        ".loader-container .main-loader .mid-counter",
+        {
+          scale: 1,
+          duration: 1,
+        },
+        "start"
+      )
+      .from(
+        ".loader-container .main-loader .upper-img-container",
+        {
+          x: -900,
+          duration: 1,
+          opacity: 0,
+        },
+        "start"
+      )
+      .from(
+        ".loader-container .main-loader .lower-img-container",
+        {
+          x: 200,
+          opacity: 0,
+          duration: 1,
+        },
+        "start"
+      );
   }, []);
-
-  const AfterCompleteLoading = useGSAP(() => {
+  useGSAP(() => {
+    const tl3 = gsap.timeline();
     if (isLoading >= 100) {
-      //after counting are completed this start
-      const tl2 = gsap.timeline({ defaults: "duration:0.9" });
-      tl2
+      tl3
         .to(".loader-container .main-loader .mid-counter", {
           scale: 0,
         })
         .to(".loader-container .upper-img-container>img", {
-          transform: "translateX(630px)",
-        })
-        .to(".loader-container .upper-img-container>img", {
-          transform: "translateX(630px)translateY(50px)",
-        })
-        .to(".loader-container .lower-img-container>img", {
-          transform: "translateY(-50px)",
-        })
-        
-        .to(".loader-container .upper-img-container>img", {
-          opacity: 0,
-        })
-        .to(".loader-container .lower-img-container>img", {
-          opacity: 0,
-        })
+          transform: "translateX(590px)",
+        });
+      tl3.add("after");
+      tl3
+        .to(
+          ".loader-container .upper-img-container>img",
+          {
+            transform: "translateX(590px)translateY(30px)",
+          },
+          "after"
+        ) 
+        .to(
+          ".loader-container .lower-img-container>img",
+          {
+            transform: "translateY(-40px)",
+          },
+          "after"
+        )
         .to(".loader-container .main-loader", {
-          duration: 0.2,
-          background: "rgba(255, 255, 255, 0.2)",
-          backdropFilter: "blur(5px)",
-          borderRadius: "16px",
-          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-          backdropFilter: "blur(5px)",
-          border: "1px solid rgba(255, 255, 255, 0.3)",
+          duration: 2,
+          opacity: 0,
         })
-        .to(".Background-Blur ", {
-          direction: 0.5,
-          opacity: 1,
+        .to(".loader-container", {
+          display:'none'
         })
-        .to(".home-Iamges .home-image-1", {
-          direction: 2,
-          // scale:0.8,
-          opacity: 1,
-        })
-        .to(".home-Iamges .home-image-2", {
-          direction: 2,
-          opacity: 1,
-          // scale:0.8,
-        })
+    }
+  }, [isLoading]);
+  useGSAP(() => {
+    const homeTl = gsap.timeline();
+    if (isLoading > 100) {
+      homeTl.add("visible");
+      homeTl
+        .to(
+          ".Background-Blur ",
+          {
+            duration: 0.5,
+            opacity: 1,
+            delay: 2,
+          },
+          "visible"
+        )
+        .to(
+          ".home-image .home-image-1",
+          {
+            duration: 1,
+            delay: 1.5,
+            opacity: 1,
+          },
+          "visible"
+        )
+        .to(
+          ".home-image .home-image-2",
+          {
+            duration: 1,
+            opacity: 1,
+            delay: 1.5,
+          },
+          "visible"
+        )
+        .to(
+          ".loader-container",
+          {
+            opacity: 0,
+          },
+          "blur"
+        );
+      homeTl
         .to(".navbar-main", {
           opacity: 1,
           duration: 0.9,
@@ -85,7 +123,6 @@ function LoaderAnimation(isLoading) {
           scale: 1,
           ease: "back.inOut",
         })
-
         .to(".home-title h1", {
           top: "0",
           opacity: 1,
@@ -101,10 +138,35 @@ function LoaderAnimation(isLoading) {
         .to(".home-main h5", {
           opacity: 1,
           y: "-40",
-          duration: 2,
+          duration: 1,
           ease: "bounce.out",
           duration: 0.4,
         });
+    }
+  }, [isLoading]);
+  useGSAP(() => {
+    const tl4 = gsap.timeline();
+    if (isLoading >= 100) {
+      tl4.add("blur");
+      tl4
+        .to(
+          ".loader-container .upper-img-container>img",
+          {
+            delay: 1.5,
+            opacity: 0,
+            duration: 1.5,
+          },
+          "blur"
+        )
+        .to(
+          ".loader-container .lower-img-container>img",
+          {
+            delay: 1.5,
+            opacity: 0,
+            duration: 1.5,
+          },
+          "blur"
+        );
     }
   }, [isLoading]);
 }

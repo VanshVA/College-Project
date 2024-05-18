@@ -2,9 +2,9 @@ import React from 'react'
 import './Footer.css'
 
 export default function Footer() {
-    return (
+    return ( 
         <>
-            <div className="footer">
+            <section id='Footer-section' className="footer">
                 <div className="footer_top">
                     <div className="footer_top_left">
                         <a href="">Home</a>
@@ -20,7 +20,7 @@ export default function Footer() {
                         </h1>
                         <input type="email" placeholder="Enter your Email Address..." />
                         <button>
-                            siddhi kashyap <i className="ri-arrow-right-up-line" />
+                            Dhruv kashyap <i className="ri-arrow-right-up-line" />
                         </button>
                     </div>
                     <div className="footer_top_left">
@@ -50,7 +50,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
         </>
     )

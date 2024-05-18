@@ -2,21 +2,20 @@
     --loader-container-color : white;
     --loader-shadow: rgb(59, 59, 59, 0.9);
     --black :black;
-}
-.loader-container{
-    position: absolute;
-    display: flex;
-  justify-content:center;
-  align-items: center;
-  width: 100%;
-  height: calc(100vh - 6rem);
+} 
+.loader-container{ 
+    position:absolute;  
+     width: 100%;
+     height: 100vh;
+     padding: 0 45px;
     background-color: var(--loader-container-color);
 }
 .loader-container .main-loader{
-    position: relative;
-    height: 90%;
+    position: absolute;
+    top: 7rem;
     overflow: hidden; 
-    width: 90%;
+    width: calc(100% - 8%);
+     height: calc(100vh - 8rem);
     border-radius: 15px;
     background-color: var(--black);
 }
@@ -24,22 +23,23 @@
     position: relative;
      width:100%;
      opacity: 1;
-   height: 35%; 
+        height: 40%; 
    padding: 10px 60px;
 }
 .loader-container .main-loader .upper-img-container>img{
-  width: 600px;
+  width: 680px;
   height: 100%;
+
 }
 .loader-container .mid-counter{
     position: relative;
     display: flex;
     scale: 0;
-    justify-content: center;
+    justify-content: center; 
     align-items:center;
     color: white;
     width: 100%;
-    height:  30%;
+    height:  18%;
 }
 .mid-counter h1{
     width: 21%;
@@ -56,26 +56,67 @@
     position: relative;
     width: 100%;
     opacity: 1;
-    height: 35%;
+    height: 42%;
     padding: 0px 40px;
 }
 .loader-container .lower-img-container>img{
      float: right;
-     width: 600px;
+     width: 680px;
      height: 100%;
 }
+@media screen and (max-width:1230px) {
+  .loader-container .main-loader .upper-img-container>img{
+    width: 620px;
+  }
+  .loader-container .lower-img-container>img { 
+    width: 420px;
+}
+.mid-counter h1{
+  font-size: 1.5rem;
+}
 
+}
 @media screen and (max-width:992px) {
-
+  .loader-container .main-loader .upper-img-container>img{
+    width: 380px;
+    height: 140px;
+  }
+  .loader-container .lower-img-container>img { 
+    width: 380px;
+    height: 140px;
+}
+.mid-counter h1{
+width: 50%;
+  font-size: 1.5rem;
+}
 
 }
 
 @media screen and (max-width: 768px) {
- 
+  .loader-container .main-loader .upper-img-container>img{
+    width: 350px;
+    height: 130px;
+  }
+  .loader-container .lower-img-container>img { 
+    width: 290px;
+    height: 130px;
 
+}
+.mid-counter h1{
+  font-size: 1.4rem;
+}
 }
 
 @media screen and (max-width:576px) {
-  
+  .loader-container .main-loader .upper-img-container>img{
+    width: 250px;
+    height: 100px;
+  }
+  .loader-container .lower-img-container>img { 
+    width: 240px;
+}
+.mid-counter h1{
+  font-size: 1rem;
+}
  
 }
